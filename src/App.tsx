@@ -1,34 +1,82 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import { Map } from "./components/Map";
+import fetchCep from "./services/fetchCep";
+import { Cep } from "./type";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [cepCode, setCepCode] = useState("");
+  const [cep, setCep] = useState<Cep>();
+  const [isLoading, setIsLoading] = useState<Boolean>();
+
+  useEffect(() => {
+    if (cepCode.length === 8) {
+      setIsLoading(true);
+      const fetchData = async (cep: string) => {
+        const data = await fetchCep(cep).finally(() => {
+          setIsLoading(false);
+        });
+
+        setCep(data);
+      };
+
+      fetchData(cepCode);
+    } else {
+      setCep(undefined);
+    }
+  }, [cepCode]);
 
   return (
-    <div className="App">
+    <div>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <form>
+          <h1>Insira o CEP</h1>
+          <input
+            type="text"
+            value={cepCode}
+            placeholder="Digite aqui seu CEP"
+            onChange={(e) => setCepCode(e.target.value)}
+          />
+        </form>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
 
-export default App
+      <div>
+        <h3>
+          Estado:{" "}
+          {isLoading ? (
+            <span>Loading...</span>
+          ) : (
+            <span>{cep?.ok ? cep.state : cep?.message}</span>
+          )}
+        </h3>
+        <h3>
+          Cidade:{" "}
+          {isLoading ? (
+            <span>Loading...</span>
+          ) : (
+            <span>{cep?.ok ? cep.city : cep?.message}</span>
+          )}
+        </h3>
+        <h3>
+          Bairro:{" "}
+          {isLoading ? (
+            <span>Loading...</span>
+          ) : (
+            <span>{cep?.ok ? cep.district : cep?.message}</span>
+          )}
+        </h3>
+        <h3>
+          Endereço:{" "}
+          {isLoading ? (
+            <span>Loading...</span>
+          ) : (
+            <span>{cep?.ok ? cep.address : cep?.message}</span>
+          )}
+        </h3>
+      </div>
+
+      <Map />
+    </div>
+  );
+};
+
+export default App;
