@@ -3,6 +3,7 @@ import fetchCep from "./services/fetchCep";
 import { Map } from "./components/Map";
 import { Cep } from "./type";
 import { GiFlyingTarget } from "react-icons/gi";
+import { FaSearchLocation } from "react-icons/fa";
 
 import "./styles/app.scss";
 
@@ -29,29 +30,37 @@ const App = () => {
 
   return (
     <div className="container">
-      <div>
-        <header className="header">
-          <div className="title">
-            <span>Zip</span>Hunter
-          </div>
-          <GiFlyingTarget />
-        </header>
-      </div>
+      <header className="header">
+        <div className="title">
+          <span>Zip</span>Hunter
+        </div>
+        <GiFlyingTarget />
+      </header>
 
       <main>
-        <div>
-          <form>
-            <h1>Insira o CEP</h1>
-            <input
-              type="text"
-              value={cepCode}
-              placeholder="Digite aqui seu CEP"
-              onChange={(e) => setCepCode(e.target.value)}
-            />
+        <div className="formContainer">
+          <form className="form">
+            <h1>Procure e encontre CEPS de todo o Brasil</h1>
+            <span>
+              O ZipHunter ajuda você a encontrar um CEP e tudo que esteja
+              relacionado a ele.
+            </span>
+
+            <div className="searchBar">
+              <input
+                type="text"
+                value={cepCode}
+                placeholder="Informe o CEP"
+                onChange={(e) => setCepCode(e.target.value)}
+              />
+              <span>
+                <FaSearchLocation />
+              </span>
+            </div>
           </form>
         </div>
 
-        <div>
+        {/* <div>
           <h3>
             Estado:{" "}
             {isLoading ? (
@@ -84,9 +93,9 @@ const App = () => {
               <span>{cep?.ok ? cep.address : cep?.message}</span>
             )}
           </h3>
-        </div>
+        </div> */}
 
-        <Map />
+        {/* <Map /> */}
       </main>
     </div>
   );
