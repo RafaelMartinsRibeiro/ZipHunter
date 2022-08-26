@@ -1,5 +1,5 @@
 import Chart from "react-google-charts";
-import { data, options } from "../data";
+import { data, options } from "../../data";
 
 export const Map = () => {
   return (
