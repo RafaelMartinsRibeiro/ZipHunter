@@ -1,0 +1,79 @@
+.header {
+  width: 100%;
+  height: 6rem;
+  background: rgb(6, 19, 32);
+  background: linear-gradient(
+    351deg,
+    rgba(6, 19, 32, 1) 0%,
+    rgba(11, 34, 57, 1) 100%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  color: #ffd400;
+  font-size: 4.5rem;
+  font-weight: 800;
+
+  .title {
+    font-size: 2.5rem;
+    color: white;
+
+    span {
+      font: 3.5rem "Orbitron", sans-serif;
+      color: #56aff8;
+    }
+  }
+}
+
+.formContainer {
+  padding: 6rem;
+  background-color: #06416a;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-weight: 800;
+      color: #ffd400;
+    }
+
+    .searchBar {
+      margin-top: 2rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      width: 80%;
+
+      input {
+        width: 100%;
+        height: 4rem;
+        border: 0 none;
+        border-radius: 10px;
+        padding: 2rem;
+
+        &:focus {
+          box-shadow: 0 0 0 0;
+          outline: 0;
+        }
+      }
+
+      span {
+        line-height: 0;
+        font-size: 2rem;
+        color: #0c1014;
+
+        position: absolute;
+        right: 2rem;
+      }
+    }
+  }
+}
