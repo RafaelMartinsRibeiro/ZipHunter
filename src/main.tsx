@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { ZipProvider } from "./contexts/ZipContext";
 import "./styles/global.scss";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <ZipProvider>
+      <App />
+    </ZipProvider>
   </React.StrictMode>
 );

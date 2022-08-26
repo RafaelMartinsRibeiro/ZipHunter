@@ -1,4 +1,4 @@
-export type Cep = {
+export type Zip = {
   status: number;
   ok: boolean;
   code: string;
