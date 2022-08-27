@@ -5,6 +5,7 @@ import { FaSearchLocation } from "react-icons/fa";
 
 import "./styles.scss";
 import { ZipContext } from "../../contexts/ZipContext";
+import { Infos } from "../Infos";
 
 export const SearchZip = () => {
   const { zipCode, handleZipCodeChange } = useContext(ZipContext);
@@ -21,7 +22,7 @@ export const SearchZip = () => {
       <main>
         <div className="formContainer">
           <form className="form">
-            <h1>Procure e encontre zipS de todo o Brasil</h1>
+            <h1>Procure e encontre CEPS de todo o Brasil</h1>
             <span>
               O ZipHunter ajuda você a encontrar um CEP e tudo que esteja
               relacionado a ele.
@@ -40,6 +41,8 @@ export const SearchZip = () => {
             </div>
           </form>
         </div>
+
+        <Infos />
 
         {/* <Map /> */}
       </main>

@@ -1,4 +1,4 @@
-import { SearchZip } from "./components/SearchZip";
+import { SearchZip } from "./components/Search";
 
 const App = () => {
   return <SearchZip />;
