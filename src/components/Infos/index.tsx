@@ -20,7 +20,7 @@ export const Infos = () => {
             <div>
               <img src={loader} alt="loader" />
             </div>
-          ) : (
+          ) : ( 
             <span>
               {zipCode.length < 8 && "Digite o CEP"}{" "}
               {zip?.ok && zip?.state !== "" ? zip.state : zip?.message}

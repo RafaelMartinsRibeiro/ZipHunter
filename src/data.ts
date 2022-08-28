@@ -1,5 +1,5 @@
 export const data = [
-  ["State", "Text"],
+  ["State", "Select"],
   ["BR-AC", "Acre: 69900-000 a 69999-999"],
   ["BR-AL", "Alagoas: 57000-000 a 57999-999"],
   ["BR-AP", "Amapá: 68900-000 a 68999-999"],
@@ -32,10 +32,17 @@ export const data = [
 export const options = {
   region: "BR",
   resolution: "provinces",
-  backgroundColor: "#29292e",
-  datalessRegionColor: "#29292e",
+  displayMode: "regions",
+  backgroundColor: "#ffffff",
+  datalessRegionColor: "#ffffff",
   defaultColor: "#56aff8",
+  markerOpacity: 0,
+  lineColor: "#ffffff",
+  sizeAxis: {
+    minValue: 0,
+    maxSize: 100,
+  },
 
   width: 610,
-  height: 390,
+  height: 380,
 };

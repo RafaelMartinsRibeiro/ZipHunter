@@ -6,6 +6,7 @@ import { FaSearchLocation } from "react-icons/fa";
 import "./styles.scss";
 import { ZipContext } from "../../contexts/ZipContext";
 import { Infos } from "../Infos";
+import { Map } from "../Map";
 
 export const SearchZip = () => {
   const { zipCode, handleZipCodeChange } = useContext(ZipContext);
@@ -44,7 +45,7 @@ export const SearchZip = () => {
 
         <Infos />
 
-        {/* <Map /> */}
+        <Map />
       </main>
     </div>
   );
