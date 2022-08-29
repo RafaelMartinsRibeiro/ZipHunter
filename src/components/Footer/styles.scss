@@ -36,11 +36,11 @@
 
 .socialMedias {
   font-size: 1.2rem;
-  span{
-    color: #ffd400
+  span {
+    color: #ffd400;
   }
 
-  div{
+  div {
     color: #56aff8;
     font-size: 1.5rem;
     display: flex;
@@ -65,6 +65,104 @@
     span {
       font: 2.5rem "Orbitron", sans-serif;
       color: #56aff8;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footerContainer {
+    padding-top: 3rem;
+    padding-bottom: 1.3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .footerTitle {
+    font-size: 1rem;
+  }
+
+  .footerDescription {
+    margin-top: 1rem;
+    margin-bottom: 1.3rem;
+    padding-bottom: 2rem;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+    }
+  }
+
+  .socialMedias {
+    font-size: 1rem;
+
+    div {
+      font-size: 1.3rem;
+    }
+  }
+
+  .logo {
+    gap: 0.3rem;
+
+    font-size: 3rem;
+
+    .zipHunter {
+      font-size: 1.3rem;
+
+      span {
+        font: 2rem "Orbitron", sans-serif;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .footerContainer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .footerTitle {
+    font-size: 0.8rem;
+  }
+
+  .footerDescription {
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.6rem;
+    }
+  }
+
+  .socialMedias {
+    font-size: 0.8rem;
+
+    div {
+      font-size: 0.8rem;
+    }
+  }
+
+  .logo {
+    gap: 0.2rem;
+
+    font-size: 2rem;
+
+    .zipHunter {
+      font-size: 1rem;
+
+      span {
+        font: 1.5rem "Orbitron", sans-serif;
+      }
     }
   }
 }
