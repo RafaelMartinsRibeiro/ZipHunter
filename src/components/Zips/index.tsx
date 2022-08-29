@@ -1,4 +1,4 @@
-import { CepTable } from "./CepTable";
+import { CepTable } from "../CepTable";
 import { Map } from "./Map";
 
 export const Zips = () => {

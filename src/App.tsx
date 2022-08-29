@@ -7,13 +7,13 @@ import { Zips } from "./components/Zips";
 const App = () => {
   return (
     <>
-      <Header />
+      <header>
+        <Header />
+      </header>
 
       <main>
         <Search />
-
         <Infos />
-
         <Zips />
       </main>
 

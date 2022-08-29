@@ -37,7 +37,7 @@ export function ZipProvider({ children }: ZipProviderProps) {
   }, [zipCode]);
 
   const handleZipCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setZipCode(e.target.value);
+    setZipCode(e.target.value.replace(/[^\d]/g, ""));
   };
 
   return (

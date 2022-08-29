@@ -24,6 +24,7 @@ export const Search = () => {
               value={zipCode}
               placeholder="Informe o CEP"
               onChange={handleZipCodeChange}
+              maxLength={8}
             />
             <span
               style={

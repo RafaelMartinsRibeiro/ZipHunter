@@ -1,4 +1,4 @@
-import { ceps } from "../../../data";
+import { ceps } from "../../data";
 
 import "./styles.scss";
 
