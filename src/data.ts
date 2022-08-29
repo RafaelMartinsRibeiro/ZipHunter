@@ -1,4 +1,4 @@
-export const data = [
+export const mapData = [
   ["State", "Select"],
   ["BR-AC", "Acre: 69900-000 a 69999-999"],
   ["BR-AL", "Alagoas: 57000-000 a 57999-999"],
@@ -29,6 +29,37 @@ export const data = [
   ["BR-TO", "Tocantins: 77000-000 a 77999-999"],
 ];
 
+export const ceps = [
+  { estado: "Acre", cep: "69900-000 a 69999-999" },
+
+  { estado: "Alagoas", cep: "57000-000 a 57999-999" },
+  { estado: "Amapá", cep: "68900-000 a 68999-999" },
+  { estado: "Amazonas", cep: "69000-000 a 69299-999 / 69000-000 a 69299-999" },
+  { estado: "Bahia", cep: "40000-000" },
+  { estado: "Ceará", cep: "60000-000" },
+  { estado: "Distrito Federal", cep: "70000-000" },
+  { estado: "Espírito Santo", cep: "29000-000 a 29999-999" },
+  { estado: "Goiás", cep: "72800-000 a 72999-999 / 73700-000 a 76799-999" },
+  { estado: "Maranhão", cep: "65000-000 a 65999-999" },
+  { estado: "Mato Grosso", cep: "78000-000 a 78899-999" },
+  { estado: "Mato Grosso do Sul", cep: "79000-000 a 79999-999" },
+  { estado: "Minas Gerais", cep: "30000-000 a 39999-999" },
+  { estado: "Pará", cep: "66000-000 a 68899-999" },
+  { estado: "Paraíba", cep: "58000-000 a 58999-999" },
+  { estado: "Paraná", cep: "80000-000 a 87999-999" },
+  { estado: "Pernambuco", cep: "50000-000 a 56999-999" },
+  { estado: "Piauí", cep: "64000-000 a 64999-999" },
+  { estado: "Rio de Janeiro", cep: "20000-000 a 28999-999" },
+  { estado: "Rio Grande do Norte", cep: "59000-000 a 59999-999" },
+  { estado: "Rio Grande do Sul", cep: "90000-000 a 99999-999" },
+  { estado: "Rondônia", cep: "76800-000 a 76999-999" },
+  { estado: "Roraima", cep: "69300-000 a 69399-999" },
+  { estado: "Santa Catarina", cep: "88000-000 a 89999-999" },
+  { estado: "Sergipe", cep: "49000-000 a 49999-999" },
+  { estado: "São paulo", cep: "01000-000 a 19999-999" },
+  { estado: "Tocantins", cep: "77000-000 a 77999-999" },
+];
+
 export const options = {
   region: "BR",
   resolution: "provinces",
@@ -36,12 +67,6 @@ export const options = {
   backgroundColor: "#ffffff",
   datalessRegionColor: "#ffffff",
   defaultColor: "#56aff8",
-  markerOpacity: 0,
-  lineColor: "#ffffff",
-  sizeAxis: {
-    minValue: 0,
-    maxSize: 100,
-  },
 
   width: 610,
   height: 380,
