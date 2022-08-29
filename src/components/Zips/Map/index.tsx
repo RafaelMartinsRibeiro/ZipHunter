@@ -1,5 +1,5 @@
 import Chart from "react-google-charts";
-import { mapData, options } from "../../data";
+import { mapData, options } from "../../../data";
 
 import "./styles.scss";
 
