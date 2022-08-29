@@ -70,11 +70,24 @@
       span {
         line-height: 0;
         font-size: 2rem;
-        color: #0c1014;
 
         position: absolute;
         right: 2rem;
       }
     }
+  }
+}
+
+.stateZips {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    font-size: 2rem;
+    color: #06416a;
+    margin-bottom: 2rem;
   }
 }

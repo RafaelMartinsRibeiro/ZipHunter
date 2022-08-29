@@ -7,6 +7,7 @@ import "./styles.scss";
 import { ZipContext } from "../../contexts/ZipContext";
 import { Infos } from "../Infos";
 import { Map } from "../Map";
+import { CepTable } from "../CepTable";
 
 export const SearchZip = () => {
   const { zipCode, handleZipCodeChange } = useContext(ZipContext);
@@ -36,7 +37,13 @@ export const SearchZip = () => {
                 placeholder="Informe o CEP"
                 onChange={handleZipCodeChange}
               />
-              <span>
+              <span
+                style={
+                  zipCode.length === 8
+                    ? { color: "#ffd400" }
+                    : { color: "#0c1014" }
+                }
+              >
                 <FaSearchLocation />
               </span>
             </div>
@@ -45,7 +52,11 @@ export const SearchZip = () => {
 
         <Infos />
 
-        <Map />
+        <div className="stateZips">
+          <h3>Faixas de CEPS do Brasil</h3>
+          <Map />
+          <CepTable />
+        </div>
       </main>
     </div>
   );
