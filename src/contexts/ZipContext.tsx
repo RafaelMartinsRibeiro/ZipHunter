@@ -18,7 +18,7 @@ export const ZipContext = createContext({} as ZipContextData);
 export function ZipProvider({ children }: ZipProviderProps) {
   const [zipCode, setZipCode] = useState("");
   const [zip, setZip] = useState();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (zipCode.length === 8) {
