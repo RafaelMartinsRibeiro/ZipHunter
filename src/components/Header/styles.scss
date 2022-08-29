@@ -27,3 +27,39 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    height: 5rem;
+
+    gap: 0.5rem;
+
+    font-size: 3.5rem;
+
+    .title {
+      font-size: 2rem;
+
+      span {
+        font: 3rem "Orbitron", sans-serif;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    height: 4rem;
+
+    gap: 0.2rem;
+
+    font-size: 2.5rem;
+
+    .title {
+      font-size: 1.3rem;
+
+      span {
+        font: 2rem "Orbitron", sans-serif;
+      }
+    }
+  }
+}
