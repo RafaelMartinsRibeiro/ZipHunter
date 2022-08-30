@@ -20,7 +20,7 @@
 
 
 <h1 align="center">
-  <img alt="ZipHunter" src=".github/logo.png" width="600px" height="300px"> 
+  <img alt="ZipHunter" src=".github/logo.png" width="400px" height="100px"> 
 </h1>
 
 
